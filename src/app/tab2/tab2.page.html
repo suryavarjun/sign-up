@@ -1,0 +1,154 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Photo Gallery
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<img [src]="currentImage" *ngIf="currentImage">
+<ion-fab vertical="bottom" horizontal="center" slot="fixed">
+  <ion-fab-button (click)="takePicture()">
+    <ion-icon name="camera"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title color="secondary">Fill Detils</ion-card-title>
+  </ion-card-header>
+
+  <form [formGroup]="todo" (ngSubmit)="doSubmit()">
+    <ion-item>
+      <ion-label position="floating">Enter Name</ion-label>
+      <ion-input formControlName="customerName"  [(ngModel)]="custname"  type="text"></ion-input>
+      <!--  -->
+    </ion-item>
+
+    <!-- <div class="error-messages">
+      <ng-container *ngFor="let error of error_messsages.customerName">
+        <div class="error-message" *ngIf="todo.get('customerName').hasError(error.type) && (todo.get('customerName').dirty || todo.get('customerName').touched)">
+          {{ error.messages }}
+        </div>
+      </ng-container>
+    </div> -->
+    <ion-item>
+      <ion-label position="floating">Enter Number</ion-label>
+      <ion-input formControlName="customerNumber" [(ngModel)]="custnumber"  type="number"></ion-input>
+      <!--  -->
+    </ion-item>
+
+    <!-- <div class="error-messages">
+      <ng-container *ngFor="let error of error_messsages.customerNumber">
+        <div class="error-message" *ngIf="todo.get('customerNumber').hasError(error.type) && (todo.get('customerNumber').dirty || todo.get('customerNumber').touched)">
+          {{ error.messages }}
+        </div>
+      </ng-container>
+    </div> -->
+    <!-- <div class="ion-text-right">
+    </div> -->
+
+    <ion-grid>
+    <ion-row>
+    <ion-col></ion-col>
+      <ion-col>
+      <ion-button type="clear" (click)="onCancel" color="medium" id="btn-cancel">
+      <ion-icon slot="start" name="close"></ion-icon>
+        Cancel
+      </ion-button>
+      </ion-col>
+      <ion-col>
+      <ion-button ion-button type="submit" (click)="doSuccess()" color="success"  [disabled]="!todo.valid">
+      <ion-icon slot="start" name="checkmark"></ion-icon>
+         Success
+      </ion-button>
+          <!-- <ion-button (click)="doSuccess()" color="success" id="btn-success" >
+            <ion-icon slot="start" name="checkmark"></ion-icon>
+            Success
+          </ion-button> -->
+      </ion-col>
+      </ion-row>
+    </ion-grid>
+    </form>
+</ion-card>
+<ion-slides class="iage-slider">
+  <ion-slide *ngFor="let img of images"> 
+   <ion-img src="assets/img/{{img}}" width="150" height="150" ></ion-img>
+  </ion-slide>
+</ion-slides>
+
+  <ion-grid>
+  <ion-row>
+  <ion-col>
+    <div id="id1" >
+      <h3>text-start</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+      </div>
+  </ion-col> <br/>
+  <ion-col>
+      <div id="id2" >
+        <h3>text-end</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+      </div>
+  </ion-col>
+    </ion-row>
+  </ion-grid>
+      
+    <ion-grid class="ion">
+    <ion-row  >
+    <ion-col >
+        <div>
+          1 of 2
+        </div>
+    </ion-col>
+    <ion-col>
+        <div>
+          2 of 2
+        </div>
+      </ion-col>
+    </ion-row>
+      <ion-row class="ion-align-items-end">
+      <ion-col>
+        Hello
+      </ion-col>
+      <ion-col>
+        hi
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-left">
+    <ion-col>
+        123
+    </ion-col>
+    <ion-col>
+        4546
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+  <br/>
+
+     <div>
+    <div id="id3" >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    </div> <br/><br/>
+    <div id="id4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    </div>
+  </div>
+
+  <div class="back">
+    <ion-input type="text" #uname placeholder="userName" class="form-control"></ion-input>
+    <ion-button class="primary" (click)="add(uname)">Register</ion-button>    
+    <ion-button class="danger" color="danger" (click)="sub()">Remove</ion-button>    
+  </div>
+
+  <ion-list>
+    <ion-item *ngFor="let user of users; index as i">
+      <ion-label>{{  user.name }}</ion-label>
+      <ion-button color="danger" (click)="remove(i)">Delete</ion-button>
+    </ion-item>
+
+    <ion-item>
+      
+    </ion-item>
+  </ion-list>
+</ion-content>

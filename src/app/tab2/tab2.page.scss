@@ -1,0 +1,52 @@
+// ion-content {
+//     --ion-background-color: #df9f296b;
+// }
+
+form ion-label{
+    color:white;
+}
+
+#id1 {
+    text-align: start;
+    border: 2px rgb(42, 42, 173) solid;
+    padding: 15px;
+}
+
+#id2 {
+    text-align: center;
+    padding: 15px;
+    border: 2px rgb(145, 27, 27) solid;
+}
+
+#id4 {
+    text-transform: capitalize;
+    padding: 45px;
+}
+
+#id3 {
+    text-transform: capitalize;
+    float: left;
+    border: 2px solid black;
+    padding: 15px;
+    margin:15px;
+}
+
+.ion{
+    border: 3px black solid;
+    padding-left: 20px;
+    margin: 10px 10px;
+}
+
+.ion-align-items-end{
+    align-items: center;
+}
+
+.error-messages{
+    font-size: 0.7em;
+    color: red;
+    text-align: center;
+}
+
+.back{
+    background-color: wheat;
+}

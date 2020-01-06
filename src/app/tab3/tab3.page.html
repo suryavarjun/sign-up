@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab Three
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content overflow-scroll="true">
+
+<ion-item>
+  <ion-label>username</ion-label>
+</ion-item>  
+
+<ion-card>
+  <ion-item href="#">
+    <ion-icon name="home" slot="start"></ion-icon>
+    <ion-label>ion-item in a card, icon left, button right</ion-label>
+    <ion-button fill="outline" slot="end">View</ion-button>
+  </ion-item>
+
+  <ion-card-content>
+    This is content, without any paragraph or header tags,
+    within an ion-card-content element.
+  </ion-card-content>
+
+  <ion-item >
+    <ion-label>MM DD YY</ion-label>
+    <ion-datetime displayFormat="MM DD YY"  min="1989-06-04" max="2020-12-31" value="1994-12-15T13:47:20.789"></ion-datetime>
+  </ion-item>
+  
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="#"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    </ion-buttons>
+  </ion-toolbar>
+</ion-card>
+
+<!-- <form [formGroup]="todo" (ngSubmit)="doSubmit()"> -->
+<ion-item>
+    <ion-label position="floating">Username</ion-label>
+    <ion-input [(ngModel)]="userName" value= "{{ userName }}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="password" [(ngModel)]="password" value="{{ password }}"></ion-input>
+  </ion-item>
+
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <ion-button (click)="doSignUp()" color="medium" id="btn-cancel">
+          <ion-icon slot="start" name="close"></ion-icon>
+          SIGN UP
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button ion-button  (click)="doSignIn()" color="success">
+          <ion-icon slot="start" name="checkmark"></ion-icon>
+          SIGN IN
+       </ion-button> -->
+        <!-- <ion-button (click)="doSuccess()" color="success" id="btn-success" >
+          <ion-icon slot="start" name="checkmark"></ion-icon>
+          Success
+        </ion-button> -->
+      <!-- </ion-col>
+    </ion-row>
+  </ion-grid> -->
+<!-- </form> -->
+ <div text-centre  >
+    <ion-button ion-button margin-right (click)="doSignUp()">
+      SIGN UP
+    </ion-button>
+    <ion-button ion-button type="submit" color="secondary" margin-right (click)="doSignIn()">
+      SIGN IN
+    </ion-button>
+   
+  </div>
+</ion-content>

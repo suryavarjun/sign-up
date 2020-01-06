@@ -1,0 +1,25 @@
+.welcome-card img {
+  max-height: 25vh;
+  overflow: hidden;
+}
+.welcome-card ion-card-title{
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: blue;
+}
+
+ion-item.item:hover a {
+
+  background-color: gray;
+}
+
+.but{
+  border: 2px blue solid;
+  background-color: white;
+  color: yellowgreen;
+  text-align: center;
+}
+

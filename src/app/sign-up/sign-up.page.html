@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sign-Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+<ion-item (ngSubmit)="doSubmit()">
+  <ion-label position="floating">First Name</ion-label>
+  <ion-input  [(ngModel)]="fname" value="{{ fname }}" type="text"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">last Name</ion-label>
+  <ion-input  [(ngModel)]="lname" value="{{ lname }}" type="text"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>MM DD YY</ion-label>
+  <ion-datetime displayFormat="MMM DD YY"  min="1989-06-04" max="2020-12-31" value="1994-12-15T13:47:20.789"></ion-datetime>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Password</ion-label>
+  <ion-input [(ngModel)]="password" value="{{ password }}" type="password"></ion-input>
+</ion-item><br/><br/>
+
+<ion-button ion-button type="submit" (click)="doSignUp()" >
+  SIGN UP
+</ion-button>
+ 
+
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="tab3"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
